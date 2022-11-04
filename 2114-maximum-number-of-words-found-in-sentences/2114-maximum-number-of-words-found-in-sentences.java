@@ -3,7 +3,7 @@ class Solution {
         int max=0;
       
         for(int i=0; i<sentences.length;i++){
-            String[] str=sentences[i].split("\s+");
+            String[] str=sentences[i].split(" ");
             
             max=Math.max(max, str.length);
        
