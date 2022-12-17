@@ -1,22 +1,20 @@
 class MyHashMap {
-    int[] set=new int[1000001]; 
-
-    public MyHashMap() {
-        for(int i=0; i<1000001;i++){
-            set[i]=-1;
-        }
-    }
+    int[] set= new int[1000001];
     
-    public void put(int key, int value) {
+    public MyHashMap(){
+        for(int i=0; i<1000001; i++){
+            set[i]=-1;
+            }
+    }
+    public void put(int key, int value){
         set[key]=value;
     }
     
-    public int get(int key) {
+    public int get(int key){
         return set[key];
     }
-    
-    public void remove(int key) {
-        set[key]=-1;
+    public void remove(int key){
+         set[key]=-1;
     }
 }
 
