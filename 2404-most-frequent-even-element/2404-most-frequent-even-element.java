@@ -4,22 +4,21 @@ class Solution {
      int n=nums.length;
         
         for(int i=0; i<n;i++){
-            if(nums[i]%2==0){
+            
                 map.put(nums[i], map.getOrDefault(nums[i],0)+1);
-            }
+            
         }
-        int max=-1;
-        int freq=-1;
+       int mfreq=-1;
+        int mval=-1;
         for(int i=0; i<n;i++){
-            if(nums[i]%2==0){
-                if(map.get(nums[i])>freq){
-                    max=nums[i];
-                    freq=map.get(nums[i]);
-                }else if(map.get(nums[i])==freq){
-                    max=max<nums[i]?max:nums[i];
-                }
+            if(nums[i]%2==0 && map.get(nums[i])>mfreq){
+                mfreq=map.get(nums[i]);
+                mval=nums[i];
+            }
+            else if(nums[i]%2==0 && map.get(nums[i])==mfreq && nums[i]<mval){
+                mval=nums[i];
             }
         }
-        return max;
+        return mval;
     }
 }
