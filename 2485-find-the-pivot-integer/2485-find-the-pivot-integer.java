@@ -9,3 +9,12 @@ class Solution {
         return -1;
     }
 }
+/*
+
+    math part:
+    1+2+3+...+x=x+(x+1)+...+n
+    
+    lhs=(1+x)*x/2
+    rhs=(x+n)*(n-x+1)/2
+
+*/
