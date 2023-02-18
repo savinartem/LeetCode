@@ -1,24 +1,12 @@
 class Solution {
     public int divisorSubstrings(int num, int k) {
-        
-        String t="";
-        String S=Integer.toString(num);
-        int c=0;
-        int i=0;
-        int j=0;
-        
-        while(j<S.length())
+        String s = String.valueOf(num);
+        int result=0;
+        for(int i=0; i<s.length()-k+1;i++)
         {
-            t+=S.charAt(j);
-            if(j-i+1<k){ j++; }
-            else if(j-i+1==k)
-            {
-                int a=Integer.parseInt(t.substring(i,i+k));
-                if(a!=0 && num%a==0) { c++; }
-                i++;
-                j++;
-            }
+            int n=Integer.valueOf(s.substring(i,i+k));
+            if(n!=0 && num%n==0) { result++; }
         }
-        return c;
+        return result;
     }
 }
