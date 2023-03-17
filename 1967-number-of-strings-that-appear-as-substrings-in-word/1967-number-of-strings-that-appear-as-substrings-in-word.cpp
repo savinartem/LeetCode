@@ -6,14 +6,11 @@ public:
         
         for(int i=0; i<patterns.size(); i++)
         {
-            if(word.find(patterns[i])==-1)
-            {
-                continue;
-            }
-            else
+            if(word.find(patterns[i])!=-1)
             {
                 count++;
             }
+
         }
         
         return count;
