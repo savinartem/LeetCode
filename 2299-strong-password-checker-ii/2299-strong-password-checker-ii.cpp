@@ -21,8 +21,8 @@ public:
             if(i<password.length()-1 && password[i]==password[i+1]) { return false; }
         }
         
-        if (low>0 && up>0 && digit>0 && special>0){  return true;}
-        return false;
+        return (low>0 && up>0 && digit>0 && special>0);
+       
         
     }
 };
