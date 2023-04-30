@@ -2,14 +2,13 @@ class Solution {
     public int missingNumber(int[] nums) {
         int n=nums.length;
         
-        HashMap<Integer, Integer> map =new HashMap<>();
+        int sumExpected=(n*(n+1))/2;
+        int sum=0;
         
         for(int i=0; i<n;i++){
-            map.put(nums[i],i);
+            sum+=nums[i];
         }
-        for(int i=0; i<=n;i++){
-            if(!map.containsKey(i)){ return i; }
-        }
-        return 0;
+
+        return sumExpected-sum;
     }
 }
